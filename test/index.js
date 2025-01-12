@@ -1,7 +1,7 @@
 var fs = require('fs');
 var path = require('path');
 var assert = require('assert');
-var parse = require('../build');
+var {default: parse} = require('../dist/index.js');
 
 function getFixtures(dirname, callback) {
 	var folderPath = path.join(__dirname, dirname);

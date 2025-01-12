@@ -1,5 +1,5 @@
 var assert = require('assert');
-var parse = require('../build.js');
+var {default: parse} = require('../dist/index.js');
 
 describe('Error messages', function() {
     it('unexpected symbol', function() {

@@ -1,6 +1,7 @@
 {
   "name": "json-to-ast",
   "version": "2.1.0",
+  "private": true,
   "author": "Vlad Trushin",
   "description": "JSON AST parser",
   "homepage": "https://github.com/vtrushin/json-to-ast",
@@ -19,36 +20,19 @@
     "json",
     "tree"
   ],
-  "main": "build.js",
-  "files": [
-    "build.js",
-    "LICENSE",
-    "README.md",
-    "CHANGELOG.md"
-  ],
   "engines": {
     "node": ">= 4"
   },
   "scripts": {
-    "build": "rollup -c",
-    "watch": "rollup -c -w",
+    "build": "smartbundle",
     "pretest": "npm run build",
     "test": "mocha",
     "prepublishOnly": "npm run build"
   },
+  "exports": "./index.js",
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-helpers": "^6.24.1",
-    "babel-plugin-external-helpers": "^6.22.0",
-    "babel-plugin-transform-object-assign": "^6.22.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-stage-3": "^6.24.1",
-    "coveralls": "^3.0.2",
     "mocha": "5.2.0",
-    "rollup": "^0.50.0",
-    "rollup-plugin-babel": "^3.0.2",
-    "rollup-plugin-commonjs": "^8.2.4",
-    "rollup-plugin-node-resolve": "^3.0.0"
+    "smartbundle": "0.13.0-alpha.1"
   },
   "dependencies": {
     "code-error-fragment": "0.0.230",
